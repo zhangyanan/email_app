@@ -1,0 +1,18 @@
+<%= form_tag :action => :login do %>
+    <table class="loginTable">
+      <tr>
+        <th>请输入用户名：</th>
+        <td><%= text_field_tag "name", flash[:name], :id => "name" %></td>
+      </tr>
+      <tr>
+        <th>请输入密码：</th>
+        <td><%= password_field_tag 'password', nil, :id => "password" %></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td><input id="submit" name="submit" type="submit"
+                   value="注册" class="submit" /> <input id="reset" name="reset"
+                                                     type="reset" value="重置" class="reset" /></td>
+      </tr>
+    </table>
+<% end %>
